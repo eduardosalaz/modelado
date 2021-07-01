@@ -1,5 +1,5 @@
 include("generador.jl")
-using Statistics, Distributions
+using Statistics
 function normal()
     generados = linealCongruencial(600, 7919, 19, 401, 5)
     normal = []
