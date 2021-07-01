@@ -1,6 +1,7 @@
 include("generador.jl")
 using Statistics
 function normal()
+    println("----------NORMAL----------")
     generados = linealCongruencial(600, 7919, 19, 401, 5)
     normal = []
     μ = mean(generados)
@@ -8,9 +9,9 @@ function normal()
     inicio = 1
     fin = 12
     for i in 1:50
-        sample = generados[inicio:fin]
-        suma = sum(sample)
-        x = μ  + σ*(suma-6)
+        muestra = generados[inicio:fin]
+        Σ = sum(muestra)
+        x = μ  + σ * (Σ - 6)
         norm = x
         println(norm)
         push!(normal, norm)
@@ -19,6 +20,8 @@ function normal()
     end
     return normal
 end
+
+
 
 function uniforme(a, b)
     println("----------UNIFORME----------")
