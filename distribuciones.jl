@@ -22,7 +22,6 @@ function normal()
 end
 
 
-
 function uniforme(a, b)
     println("----------UNIFORME----------")
     generados = linealCongruencial(100, 7919, 19, 401, 5)
